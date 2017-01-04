@@ -1,0 +1,29 @@
+<h1>Sign Up</h1>
+
+<%= flash[:notice] %>
+
+<%= form_tag("/users")do %>
+  <%= label_tag :username %>
+  <input type="text" name="user[name]" id="user" value="Username">
+
+  <br><br>
+  <%= label_tag :password %>
+  <input type="text" name="user[password]" id="password" value="Password">
+  <br><br>
+  <%= label_tag :password_confirmation %>
+  <input type="text" name="user[password_confirmation]" id="password_confirmation" value="Confirm Password">
+  <br><br>
+  <%= submit_tag "Sign up"%>
+<% end %>
+
+<h1>Login</h1>
+
+<%= form_tag("/sessions")do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <br><br>
+  <%= submit_tag "Login"%>
+<% end %>
